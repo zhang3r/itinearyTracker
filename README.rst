@@ -1,6 +1,10 @@
 it_tracker
 ==========
 
+.. image:: https://img.shields.io/travis/zhang3r/itineraryTracker/master.svg    
+        :target: https://travis-ci.org/zhang3r/itineraryTracker
+        :alt: Build Status
+
 tracking itinerary 
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg

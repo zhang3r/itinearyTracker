@@ -5,8 +5,8 @@ it_tracker
         :target: https://travis-ci.org/zhang3r/itineraryTracker
         :alt: Build Status
 
-.. image:: https://coveralls.io/repos/github/zhang3r/itineraryTracker/bage.svg?branch=master
-        :target: https://coveralls.io/repos/github/zhang3r/itineraryTracker
+.. image:: https://coveralls.io/repos/github/zhang3r/itineraryTracker/badge.svg?branch=master
+        :target: https://coveralls.io/github/zhang3r/itineraryTracker?branch=master
         :alt: Test Coverage
 
 tracking itinerary 

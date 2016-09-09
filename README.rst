@@ -5,6 +5,10 @@ it_tracker
         :target: https://travis-ci.org/zhang3r/itineraryTracker
         :alt: Build Status
 
+.. image:: https://coveralls.io/repos/github/zhang3r/itineraryTracker/bage.svg?branch=master
+        :target: https://coveralls.io/repos/github/zhang3r/itineraryTracker
+        :alt: Test Coverage
+
 tracking itinerary 
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg

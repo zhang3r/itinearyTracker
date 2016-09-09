@@ -9,7 +9,9 @@ before_install:
 install:
   - pip install -r requirements/test.txt
 script:
-  - python -m pytest
+  - coverage run -m pytest
+after_success:
+  - coverage report
 language: python
 python:
 

@@ -15,7 +15,7 @@ class Itinerary(models.Model):
         return reverse('itinerary:detail', kwargs={'name':self.name})
 
 @python_2_unicode_compatible
-class city(models.Model):
+class City(models.Model):
     name = models.CharField('Name of City', blank=True, max_length=255)
     itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE)
     #TODO zzz implement more fields
@@ -27,8 +27,8 @@ class city(models.Model):
         ordering=['start_date',]
 
 @python_2_unicode_compatible
-class hotel(models.Model):
+class Hotel(models.Model):
     name = models.CharField('Hotel Name', blank=True, max_length=255)
-    city = models.ForeignKey(city, on_delete=models.CASCADE)
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
     def __str__(self):
         return self.name

@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^users/', include('it_tracker.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
+    url(r'^itinerary/',include('it_tracker.itinerary.urls', namespace='itinerary')),
     # Your stuff: custom urls includes go here
 
 

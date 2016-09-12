@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicod_literals
+from __future__ import absolute_import, unicode_literals
 
 from .models import Itinerary, City, Hotel
 from django.contrib.auth.mixins import LoginRequiredMixin

@@ -19,4 +19,10 @@ urlpatterns = [
         view=views.ItineraryDetailView.as_view(),
         name='detail'
     ),
+    #URL pattern for itineraryUpdateView
+    url(
+        regex=r'^~update/$',
+        view=views.ItineraryUpdateView.as_view(),
+        name='update'
+        ),
 ]

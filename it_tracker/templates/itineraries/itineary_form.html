@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ itinerary.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ itinerary.name}}</h1>
+    <form class="form-horizontal" method="post" action="{% url 'itinerary:update' %}">
+        {% csrf_token %}
+        {{ form|cripy }}
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Update</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+    

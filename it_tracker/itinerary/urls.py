@@ -8,14 +8,14 @@ from django.conf.urls import url
 urlpatterns = [
     #URL pattern for the ItineraryListView
     url(
-        regex=r'^(?P<username>[\w.@+-]+)/itinerary/$',
+        regex=r'^(?P<username>[\w.@+-]+)/$',
         view=views.ItineraryListView.as_view(),
         name='list'
     ),
 
     #URL pattern for the ItineraryDetailView
     url(
-        regex=r'^(?P<username>[\w.@+-]+)/itinerary/(?P<name>[\w.@+-]+)/$',
+        regex=r'^(?P<username>[\w.@+-]+)/(?P<name>[\w.@+-]+)/$',
         view=views.ItineraryDetailView.as_view(),
         name='detail'
     ),

@@ -24,7 +24,7 @@
     <a class="btn btn-primary" href="{% url 'users:update' %}">My Info</a>
     <a class="btn btn-primary" href="{% url 'account_email' %}">E-Mail</a>
     <!-- Your Stuff: Custom user template urls -->
-    <a class="btn btn-primary" href="{% url 'itinerary:update' %}">My Itinerary</a>
+    <a class="btn btn-primary" href="{% url 'itinerary:list' object.username %}">My Itinerary</a>
   </div>
 
 </div>

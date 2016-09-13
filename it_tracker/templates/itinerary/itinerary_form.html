@@ -5,9 +5,9 @@
 
 {% block content %}
     <h1>{{ itinerary.name}}</h1>
-    <form class="form-horizontal" method="post" action="{% url 'itinerary:update' %}">
+    <form class="form-horizontal" method="post" action="{% url 'itinerary:update' user.username%}">
         {% csrf_token %}
-        {{ form|cripy }}
+        {{ form|crispy }}
         <div class="control-group">
             <div class="controls">
                 <button type="submit" class="btn">Update</button>

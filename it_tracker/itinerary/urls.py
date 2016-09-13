@@ -21,8 +21,16 @@ urlpatterns = [
     ),
     #URL pattern for itineraryUpdateView
     url(
-        regex=r'^~update/$',
+        regex=r'^(?P<username>[\w.@+-]+)/~update/$',
         view=views.ItineraryUpdateView.as_view(),
         name='update'
         ),
+
+    #URL pattern for itineraryCreateView
+    url(
+        regex=r'^(?P<username>[\w.@+-]+)/~create/$',
+        view=views.ItineraryCreateView.as_view(),
+        name='create'
+        ),
 ]
+

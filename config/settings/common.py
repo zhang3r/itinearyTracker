@@ -46,7 +46,9 @@ LOCAL_APPS = (
     # custom users app
     'it_tracker.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'it_tracker.itinerary.apps.ItineraryConfig',
 )
+
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

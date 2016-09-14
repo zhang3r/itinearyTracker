@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}{% load i18n %}
+{% block title %}{{ user.username }} Itineraries{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2> {{user.username}}  Itineraries</h2>
+    <div class="list-group">
+        {% for it in itinerary_list %}
+            <a herf="{% url 'itinerary:detail' it.user it.name %}" class="list-group-item">
+                <h4 class="list-group-item-heading">{{ it.name }}</h4>
+            </a>
+         {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-sm-12 ">
+           <a class="btn btn-primary" href="{% url 'itinerary:create' user.username %}"> create new </a> 
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+

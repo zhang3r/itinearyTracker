@@ -21,8 +21,8 @@ class ItineraryUpdateView(LoginRequiredMixin, UpdateView):
     def get_success_url(self):
         return reverse('itinerary:list')
     def get_object(self):
-        return Itinerary.objects.get(user=User.objects.get(username=self.request.user.username))
-       
+        #return Itinerary.objects.get(user=User.objects.get(username=self.request.user.username))
+        pass
 
 
 class ItineraryListView(LoginRequiredMixin, ListView):
@@ -36,7 +36,12 @@ class ItineraryCreateView(LoginRequiredMixin, CreateView):
     model=Itinerary
     fields=['name',]
     def get_success_url(self):
-        return reverse('itinerary:list')
+        return reverse('itinerary:list', kwargs={'username': self.request.user.username})
 
     def get_object(self):
         return User.objects.get(username=kwargs['username'])
+
+    def form_valid(self, form):
+        user = User.objects.get(username=self.request.user.username)
+        form.instance.user_id =user.id
+        return super(ItineraryCreateView,self).form_valid(form)

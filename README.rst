@@ -94,7 +94,14 @@ You must set the DSN url in production.
 Deployment
 ----------
 
-The following details how to deploy this application.
+Install elastic beanstalk.
+
+Deploy app into beanstalk
+
+Run server on 0.0.0.0:80
+
+http://django-env2.3phnqdznmj.us-west-2.elasticbeanstalk.com/
+
 
 
 
